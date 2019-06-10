@@ -2,6 +2,7 @@ package a24zaets39.org.chapter_1;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -26,7 +27,9 @@ public class Start extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Toast.makeText(Start.this,R.string.correct_tast, Toast.LENGTH_SHORT).show();
+                Toast toast = Toast.makeText(Start.this,R.string.correct_tast, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP, 0, 0);
+                toast.show();
             }
         });
 
@@ -35,7 +38,9 @@ public class Start extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                Toast.makeText(Start.this,R.string.incorrect_toast, Toast.LENGTH_SHORT).show();
+                Toast toast = Toast.makeText(Start.this,R.string.incorrect_toast, Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.TOP, 0, 0);
+                toast.show();
             }
         });
     }
